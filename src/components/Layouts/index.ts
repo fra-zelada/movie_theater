@@ -1,3 +1,3 @@
-export * from "./MainLayout";
 export * from "./MovieLayout";
+export * from "./MainLayout";
 

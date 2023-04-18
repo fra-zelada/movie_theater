@@ -22,8 +22,8 @@ const TicketsPage: NextPage<TicketsPageProps> = ({ host }) => {
 
     return (
         <MainLayout>
-            <div className="flex justify-center items-center  w-full my-2  ">
-                <div className="flex flex-col xl:w-[60%]  justify-center items-center border-2 border-sky-900 bg-sky-950 rounded-lg shadow-xl p-4">
+            <div className="flex justify-center items-center  w-screen my-2  ">
+                <div className="flex flex-col xl:w-[60%] w-screen  justify-center items-center border-2 border-sky-900 bg-sky-950 rounded-lg shadow-xl p-4">
                     {tickets.map((ticket) => (
                         <PurchasedTicket
                             key={ticket.id}

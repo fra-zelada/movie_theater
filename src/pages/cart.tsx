@@ -26,7 +26,7 @@ const CartPage: NextPage = () => {
                 My Cart <CartIcon className="stroke-white ml-2 h-[55px]" />
             </div>
             <div className="flex justify-center items-center  w-full my-2">
-                <div className="flex flex-col xl:w-[60%] w-[90%]  justify-center items-center border-2 border-sky-900 bg-sky-950 rounded-lg shadow-xl p-4">
+                <div className="flex flex-col xl:w-[60%] w-[99%]  justify-center items-center border-2 border-sky-900 bg-sky-950 rounded-lg shadow-xl xl:p-4 p-1">
                     {cart.map((cart) => (
                         <OrderDetails key={cart.id} order={cart} />
                     ))}

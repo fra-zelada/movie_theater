@@ -37,7 +37,7 @@ export const OrderDetails: FC<OrderDetailsProps> = ({ order }) => {
     }, [getMovieById, order.imdbID]);
 
     return (
-        <div className="xl:w-[75%] w-[95%] bg-slate-200 text-sky-950 m-1 flex flex-row p-2 rounded-xl  ">
+        <div className="xl:w-[75%] w-[98%] my-1 bg-slate-200 text-sky-950 xl:m-1 flex flex-row p-2 rounded-xl  ">
             <div className="flex justify-center items-center w-auto">
                 <picture className="flex justify-center items-center pr-3">
                     <img

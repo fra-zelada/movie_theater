@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { FC, PropsWithChildren, useContext, useEffect, useState } from "react";
+import { FC, PropsWithChildren, useContext } from "react";
 import NextLink from "next/link";
 import { CartIcon, NotificationIcon, TicketIcon } from "../Icons";
 import { OrderContext } from "@/context/order";

@@ -5,7 +5,8 @@ import { MoviesList } from "@/components/";
 import { useEffect, useState } from "react";
 import { Pagination } from "@/components/Pagination";
 import { useMovieList } from "@/hooks";
-import { MainLayout } from "@/components/layouts";
+import { MainLayout } from "@/components/layout";
+
 interface Props {
     initData: IApiResponse;
 }

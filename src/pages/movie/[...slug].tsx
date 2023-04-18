@@ -1,5 +1,6 @@
 import { StarIcon, StarsIcon, TicketIcon } from "@/components";
-import { MovieLayout } from "@/components/layouts";
+import { MovieLayout } from "@/components/layout";
+
 import { BuyTicketModal } from "@/components/modal";
 import { MovieContext } from "@/context/movie";
 import { IMovie, IMovieDetails } from "@/interfaces";

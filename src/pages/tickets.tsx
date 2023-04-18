@@ -1,4 +1,4 @@
-import { MainLayout } from "@/components/Layouts";
+import { MainLayout } from "@/components/layouts";
 import { PurchasedTicket } from "@/components/PurchasedTicket";
 import { OrderContext } from "@/context/order";
 import { IOrder } from "@/interfaces";

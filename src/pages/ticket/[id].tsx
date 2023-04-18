@@ -1,5 +1,5 @@
 import { PurchasedTicket } from "@/components";
-import { MainLayout } from "@/components/Layouts";
+import { MainLayout } from "@/components/layouts";
 import { OrderContext } from "@/context/order";
 import { GetServerSideProps, NextPage } from "next";
 import { useRouter } from "next/router";

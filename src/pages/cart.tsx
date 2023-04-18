@@ -1,5 +1,5 @@
 import { CartIcon } from "@/components";
-import { MainLayout } from "@/components/Layouts/MainLayout";
+import { MainLayout } from "@/components/layouts/MainLayout";
 import { OrderDetails } from "@/components/OrderDetails";
 import { OrderContext } from "@/context/order";
 import { IOrder } from "@/interfaces";

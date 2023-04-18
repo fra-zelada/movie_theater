@@ -1,10 +1,11 @@
 import { GetServerSideProps, NextPage } from "next";
 import { IApiResponse } from "../interfaces/";
 import { MoviesList } from "@/components/";
-import { MainLayout } from "@/components/Layouts/MainLayout";
+
 import { useEffect, useState } from "react";
 import { Pagination } from "@/components/Pagination";
 import { useMovieList } from "@/hooks";
+import { MainLayout } from "@/components/layouts";
 interface Props {
     initData: IApiResponse;
 }

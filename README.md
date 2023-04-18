@@ -1,3 +1,7 @@
+https://www.omdbapi.com/?s=harry%20potter&apikey=263d22d8&page=1
+https://www.omdbapi.com/?t=harry%20potter&apikey=263d22d8
+https://www.omdbapi.com/?i=tt0304142&apikey=5cc455f
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started

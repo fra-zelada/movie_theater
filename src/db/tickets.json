@@ -1,0 +1,14 @@
+[
+    {
+        "type": "Child",
+        "value": 2500
+    },
+    {
+        "type": "Adult",
+        "value": 3500
+    },
+    {
+        "type": "Senior",
+        "value": 2000
+    }
+]

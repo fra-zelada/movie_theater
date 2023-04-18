@@ -1,42 +1,63 @@
-https://www.omdbapi.com/?s=harry%20potter&apikey=263d22d8&page=1
-https://www.omdbapi.com/?t=harry%20potter&apikey=263d22d8
-https://www.omdbapi.com/?i=tt0304142&apikey=5cc455f
+# Movie Theater App
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Aplicación que simula la compra de entradas para un cine. 
 
-## Getting Started
+Se utilizan técnicas de React + Next.js para lograr simular el proceso de selección de tickets. Toda la información de tickets es manejada a través de Context API en conjunto con el local storage.
 
-First, run the development server:
+## Para iniciar la aplicación:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+### Configurar Variables de Entorno
+
+Renombrar archivo ```.env.TEMPLATE``` a ```.env```
+
+Se debe asignar una [Api Key de OMDB](https://www.omdbapi.com/) , puede usarse esta para el ejemplo ```bb7b170a```
+```
+NEXT_PUBLIC_OMDB_API_KEY=bb7b170a
+```
+### Configuraciones
+
+Para agregar nuevos tipos de ticket y valores se debe modificar el archivo ```src/db/tickets.json```
+
+Estos son los valores que vienen configurados por defecto:
+```
+[
+    {
+        "type": "Child",
+        "value": 2500
+    },
+    {
+        "type": "Adult",
+        "value": 3500
+    },
+    {
+        "type": "Senior",
+        "value": 2000
+    }
+]
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Ejecutar la aplicación
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+Ejecutar en el directorio raiz ```yarn dev``` y abrir en la URl que indique, por lo general es ```http://localhost:3000```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Resumen técnico
 
-## Learn More
+Se agregaron las siguientes dependencias: 
 
-To learn more about Next.js, take a look at the following resources:
+| Dependency     | Use                               |
+|--|--|
+| react-qr-code  | Creating QR codes for tickets     |
+| swr            | Handling cache and pagination    |
+| tailwindcss    | Styling the application           |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Algunas de las tecnologías utilizadas en este proyecto:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+| Name | Used for | files |
+|--|--|--|
+| getServerSideProps | Used to load data for the first page of the home | - src/pages/index.tsx |
+| ISR : <br> getStaticPaths <br> getStaticProps  | Used in generating the page for each movie | - src/pages/movie/[...slug].tsx |
+| SWR  | Requests and cache handling for browsing the pages of the home | - src/hooks/useMovieList.ts |
+| next/head for SEO  | Applied in the Layout of each movie page | - src/layouts/MovieLayout.tsx |
+| Context API  | Global state management | - src/context/... |

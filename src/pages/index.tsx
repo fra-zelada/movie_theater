@@ -1,6 +1,6 @@
 import { GetServerSideProps, NextPage } from "next";
 import { IApiResponse } from "../interfaces/";
-import { MoviesList } from "@/components/";
+import { LoadingIcon, MoviesList } from "@/components/";
 
 import { useEffect, useState } from "react";
 import { Pagination } from "@/components/Pagination";
@@ -34,7 +34,7 @@ const HomePage: NextPage<Props> = ({ initData }) => {
         return (
             <MainLayout>
                 <div className="flex justify-center w-full items-center">
-                    Loading...
+                    <LoadingIcon className="h-64 w-64 animate-spin stroke-white" />
                 </div>
             </MainLayout>
         );

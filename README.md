@@ -57,7 +57,7 @@ Rename file ```.env.TEMPLATE``` to ```.env```
 NEXT_PUBLIC_OMDB_API_KEY=bb7b170a
 NEXT_PUBLIC_MOVIE_BY_ID_PATH=http://localhost:3000
 ```
-### Configurations
+### Tickets configuration
 
 To add new ticket types and values, you need to modify the ```src/db/tickets.json``` file.
 
